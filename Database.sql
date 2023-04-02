@@ -1,0 +1,2 @@
+﻿ALTER TABLE [Table]
+RENAME TO [Car];

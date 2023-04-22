@@ -1,0 +1,68 @@
+﻿<Window x:Class="FinalProject.Images.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FinalProject.Images"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="800">
+    <Grid Background="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Grid VerticalAlignment="Top" Margin="0,0,0,0" Background="#D9D9D9" Width="225" Height="325">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <TextBlock 
+                Grid.Row="1" 
+                Margin="10,10,10,0" 
+                Text="Nice to see you!" 
+                FontSize="25" 
+                FontWeight="Medium"/>
+
+            <Image 
+                Grid.Row="0" 
+                Margin="10" 
+                Source="\Images\Cars\logo.png" 
+                Height="25" 
+                Width="50" />
+
+            <TextBlock 
+            Grid.Row="2" 
+            Margin="10,0,10,10" 
+            FontWeight="Thin"
+            FontSize="10"
+            Text="To proceed, please select your account type."/>
+
+            <StackPanel Grid.Row="3" Margin="0,5,0,0">
+                <Button Click="UserButtonClick" BorderThickness="0" Style="{StaticResource AccountTypeButton}">
+                    <StackPanel>
+                        <Image Source="\Images\Misc\User.png" 
+                           Height="85" 
+                           Width="187.5" 
+                           Margin="0,0,0,5"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+
+            <StackPanel Grid.Row="4" Margin="0,5,0,0">
+                <Button Click="AdminButtonClick" BorderThickness="0" Style="{StaticResource AccountTypeButton}">
+                    <StackPanel>
+                        <Image Source="\Images\Misc\Admin.png" 
+                           Height="85" 
+                           Width="187.5" 
+                           Margin="0,0,0,5"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

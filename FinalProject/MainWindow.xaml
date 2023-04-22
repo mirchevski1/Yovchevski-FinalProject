@@ -40,12 +40,13 @@
                 <TextBlock 
                     Text="Email" 
                     FontSize="14" 
-                    Margin="10,10,0,0"/>
+                    Margin="10,0,0,0"/>
                 <TextBox x:Name="txtEmail" 
                          Margin="10,5,10,0" 
-                         FontSize="16" 
+                         FontSize="14" 
                          Width="Auto" 
                          Height="30"
+                         VerticalContentAlignment="Center"
                          Background="#D9D9D9"/>
             </StackPanel>
             
@@ -56,15 +57,16 @@
                     Margin="10,0,0,0"/>
                 <PasswordBox x:Name="txtPassword" 
                     Margin="10,5,10,0" 
-                    FontSize="16" 
+                    FontSize="14" 
                     Width="Auto" 
                     Height="30"
+                    VerticalContentAlignment="Center"
                     Background="#D9D9D9"/>
             </StackPanel>
 
             <Button 
                 Grid.Row="4" 
-                Margin="10" 
+                Margin="10,15,10,0" 
                 Content="Login"
                 FontSize="14"
                 Background="#A43131"
@@ -73,7 +75,7 @@
 
             <TextBlock 
                 Grid.Row="5" 
-                Margin="10" 
+                Margin="10,20,0,10" 
                 FontWeight="Light"
                 Text="Don't have an account?"><Hyperlink NavigateUri="signup-page.xaml">Sign up</Hyperlink>
             </TextBlock>

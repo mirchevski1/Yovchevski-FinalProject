@@ -12,11 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Images\Cars\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Resource Include="Images\Misc\logo.png" />
+    <Resource Include="Images\Cars\logo.png" />
   </ItemGroup>
 
 </Project>

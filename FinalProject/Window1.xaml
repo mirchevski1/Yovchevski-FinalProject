@@ -1,0 +1,65 @@
+﻿<Window x:Class="FinalProject.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FinalProject"
+        mc:Ignorable="d"
+        Title="Window1" Height="512" Width="720" Background="Black">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Image Source="Images\Cars\logo.png" Grid.Row="0"  Width="30" Height="30" Margin="10" />
+        <TextBlock Text="Find your Porsche" FontWeight="SemiBold" Grid.Row="1" FontSize="24" Margin="10" Foreground="White" />
+
+
+        <!-- Car grid -->
+        <UniformGrid Grid.Row="2" Rows="2" Columns="3" HorizontalAlignment="Center">
+            <Button Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+                <StackPanel>
+                    <Image Source="Images\Cars\992-Resize.png" Width="200" Height="120" />
+                    <TextBlock Text="Porsche 911" Margin="0,5,0,0" TextAlignment="Center" Foreground="White" />
+                </StackPanel>
+            </Button>
+
+            <Button Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+                <StackPanel>
+                    <Image Source="Images\Cars\panamera-resize.png" Width="200" Height="120" />
+                    <TextBlock Text="Porsche Panamera" TextAlignment="Center" Margin="0,5,0,0" Foreground="White" />
+                </StackPanel>
+            </Button>
+
+            <Button Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+                <StackPanel>
+                    <Image Source="Images\Cars\cayenne-resize.png" Width="200" Height="120" />
+                    <TextBlock Text="Porsche Cayenne" TextAlignment="Center" Margin="0,5,0,0" Foreground="White" />
+                </StackPanel>
+            </Button>
+
+            <Button Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+                <StackPanel>
+                    <Image Source="Images\Cars\718-resize.png" Width="200" Height="120" />
+                    <TextBlock Text="Porsche 718" TextAlignment="Center" Margin="0,5,0,0" Foreground="White" />
+                </StackPanel>
+            </Button>
+
+            <Button Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+                <StackPanel>
+                    <Image Source="Images\Cars\taycan-resize.png" Width="200" Height="120" />
+                    <TextBlock Text="Porsche Taycan" TextAlignment="Center" Margin="0,5,0,0" Foreground="White" />
+                </StackPanel>
+            </Button>
+
+            <Button Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+                <StackPanel>
+                    <Image Source="Images\Cars\macan-resize.png" Width="200" Height="120" />
+                    <TextBlock Text="Porsche Macan" TextAlignment="Center" Margin="0,5,0,0" Foreground="White" />
+                </StackPanel>
+            </Button>
+        </UniformGrid>
+    </Grid>
+</Window>

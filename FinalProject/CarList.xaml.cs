@@ -21,7 +21,12 @@ namespace FinalProject
     {
         public CarList()
         {
-            InitializeComponent();
+            object value = InitializeComponent();
+        }
+
+        private object InitializeComponent()
+        {
+            throw new NotImplementedException();
         }
     }
 }

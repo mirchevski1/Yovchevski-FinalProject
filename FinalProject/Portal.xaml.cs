@@ -15,13 +15,23 @@ using System.Windows.Shapes;
 namespace FinalProject
 {
     /// <summary>
-    /// Interaction logic for Desicion.xaml
+    /// Interaction logic for Portal.xaml
     /// </summary>
-    public partial class Desicion : Window
+    public partial class Portal : Window
     {
-        public Desicion()
+        public Portal()
         {
             InitializeComponent();
+        }
+
+        private void AdminButtonClick(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void UserButtonClick(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

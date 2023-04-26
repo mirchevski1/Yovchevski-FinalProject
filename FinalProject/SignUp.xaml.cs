@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace FinalProject
 {
     /// <summary>
-    /// Interaction logic for Window1.xaml
+    /// Interaction logic for SignUp.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class SignUp : Window
     {
-        public Window1()
+        public SignUp()
         {
             InitializeComponent();
         }

@@ -8,7 +8,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\Cars\718-resize.png" />
+    <None Remove="Images\Cars\992-Resize.png" />
+    <None Remove="Images\Cars\cayenne-resize.png" />
+    <None Remove="Images\Cars\macan-resize.png" />
+    <None Remove="Images\Cars\panamera-resize.png" />
+    <None Remove="Images\Cars\taycan-resize.png" />
+    <None Remove="Images\Misc\Admin.png" />
     <None Remove="Images\Misc\logo.png" />
+    <None Remove="Images\Misc\User.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -17,7 +25,31 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Images\Cars\logo.png" />
+    <Resource Include="Images\Cars\718-resize.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Cars\992-Resize.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Cars\cayenne-resize.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Cars\logo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Cars\macan-resize.png" />
+    <Resource Include="Images\Cars\panamera-resize.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Cars\taycan-resize.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Misc\Admin.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Misc\User.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>

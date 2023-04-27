@@ -16,9 +16,6 @@ using System.Windows.Shapes;
 
 namespace FinalProject
 {
-    /// <summary>
-    /// Interaction logic for SignUp.xaml
-    /// </summary>
     public partial class SignUp : Window
     {
         public SignUp()
@@ -34,77 +31,40 @@ namespace FinalProject
             {
                 SqlConnection con = new SqlConnection(@"Server=DESKTOP-U43FOB2\MSSQLSERVER01;Database=InformaticsFinalProject;Integrated Security=True");
                 con.Open();
-                string add_data = "INSERT INTO [dbo].[userAccount] VALUES(@first_name,@last_name,@password,@email)";
-                SqlCommand cmd = new SqlCommand(add_data, con);
-                cmd.Parameters.AddWithValue("@first_name", first_name.Text);
-                cmd.Parameters.AddWithValue("@last_name", last_name.Text);
-                cmd.Parameters.AddWithValue("@email", email.Text);
-                cmd.Parameters.AddWithValue("@password", password.Password);
-                cmd.ExecuteNonQuery();
-                con.Close();
 
-                LogIn obj = new LogIn();
-                obj.Show();
-                this.Close();
+                string check_data = "SELECT COUNT(*) FROM [dbo].[userAccount] WHERE email=@email";
+                SqlCommand cmd_check = new SqlCommand(check_data, con);
+                cmd_check.Parameters.AddWithValue("@email", email.Text);
+                int count = Convert.ToInt32(cmd_check.ExecuteScalar());
 
+                if (count > 0)
+                {
+                    MessageBox.Show("An account with these credentials already exists. Please log in");
+                    LogIn w1 = new LogIn();
+                    w1.Show();
+                    this.Close();
+                }
+                else
+                {
+                    string add_data = "INSERT INTO [dbo].[userAccount] VALUES(@first_name,@last_name,@password,@email)";
+                    SqlCommand cmd = new SqlCommand(add_data, con);
+                    cmd.Parameters.AddWithValue("@first_name", first_name.Text);
+                    cmd.Parameters.AddWithValue("@last_name", last_name.Text);
+                    cmd.Parameters.AddWithValue("@email", email.Text);
+                    cmd.Parameters.AddWithValue("@password", password.Password);
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+
+                    CarList obj = new CarList();
+                    obj.Show();
+                    this.Close();
+
+                }
             }
             catch (Exception ex) 
             {
                 MessageBox.Show(ex.Message);
             }   
-            //if (passwordBox.Password != repeatBox.Password)
-            //{
-            //    MessageBox.Show("Passwords don't match.");
-            //}
-            //else
-            //{
-            //    string email = emailBox.Text.Trim();
-            //    string firstName = firstBox.Text.Trim();
-            //    string lastName = lastBox.Text.Trim();
-            //    string password = passwordBox.Password;
-
-            //    if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName))
-            //    {
-            //        MessageBox.Show("Please fill in all fields.");
-            //        return;
-            //    }
-
-
-
-            //    using (var checkCommand = new SqlCommand("SELECT COUNT(*) FROM userAccount WHERE email=@email", dbConnection))
-            //    {
-            //        checkCommand.Parameters.AddWithValue("@email", email);
-            //        object result = checkCommand.ExecuteScalar();
-            //        int count = Convert.ToInt32(result);
-
-            //        if (count > 0)
-            //        {
-            //            MessageBox.Show("Email already exists. Please choose a different username.");
-            //            return;
-            //        }
-            //    }
-
-
-
-            //    using (var insertCommand = new SqlCommand("INSERT INTO userAccount(first_name, last_name, password, gender, email) VALUES (@email, @password)", dbConnection))
-            //    {
-            //        insertCommand.Parameters.AddWithValue("@first_name", firstName);
-            //        insertCommand.Parameters.AddWithValue("@last_name", lastName);
-            //        insertCommand.Parameters.AddWithValue("@email", email);
-            //        insertCommand.Parameters.AddWithValue("@password", password);
-            //        insertCommand.ExecuteNonQuery();
-            //    }
-
-
-            //    dbConnection.Close();
-
-            //    // Show a message box to indicate success
-            //    //MessageBox.Show("Account created successfully!");
-
-            //    LogIn obj = new LogIn();
-            //    obj.Show();
-            //    this.Close();
-            //}
         }
     }
 }

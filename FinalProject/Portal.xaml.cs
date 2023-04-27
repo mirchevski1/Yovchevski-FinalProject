@@ -14,9 +14,6 @@ using System.Windows.Shapes;
 
 namespace FinalProject
 {
-    /// <summary>
-    /// Interaction logic for Portal.xaml
-    /// </summary>
     public partial class Portal : Window
     {
         public Portal()
@@ -34,7 +31,7 @@ namespace FinalProject
 
         private void AdminButtonClick(object sender, RoutedEventArgs e)
         {
-            SignUp r2 = new SignUp();
+            AddCar r2 = new AddCar();
             this.Close();
             r2.Show();
 

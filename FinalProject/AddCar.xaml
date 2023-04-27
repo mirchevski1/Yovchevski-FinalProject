@@ -39,16 +39,16 @@
                 </Grid.RowDefinitions>
 
                 <TextBlock Grid.Column="0" FontWeight="ExtraLight" Grid.Row="0" Text="Model" VerticalAlignment="Center"/>
-                <TextBox Grid.Column="0" Background="Black" Width="100" Grid.Row="1" Margin="0,0,29,0" VerticalAlignment="Center"/>
+                <TextBox x:Name="model" Grid.Column="0" Background="Black" Width="100" Grid.Row="1" Margin="0,0,29,0" VerticalAlignment="Center"/>
 
                 <TextBlock Grid.Column="1" FontWeight="ExtraLight" Grid.Row="0" Text="Make" VerticalAlignment="Center"/>
-                <TextBox Grid.Column="1" Background="Black" Width="100"  Grid.Row="1" Margin="0,0,28,0" VerticalAlignment="Center"/>
+                <TextBox x:Name="make" Grid.Column="1" Background="Black" Width="100"  Grid.Row="1" Margin="0,0,28,0" VerticalAlignment="Center"/>
 
                 <TextBlock Grid.Column="2" FontWeight="ExtraLight" Grid.Row="0" Text="Range" VerticalAlignment="Center"/>
-                <TextBox Grid.Column="2" Background="Black" Width="100"  Grid.Row="1" Margin="0,0,28,0" VerticalAlignment="Center"/>
+                <TextBox x:Name="range" Grid.Column="2" Background="Black" Width="100"  Grid.Row="1" Margin="0,0,28,0" VerticalAlignment="Center"/>
 
                 <TextBlock Grid.Column="3" FontWeight="ExtraLight" Grid.Row="0" Text="Year" VerticalAlignment="Center"/>
-                <TextBox Grid.Column="2" Background="Black" Width="100"  Grid.Row="1" Margin="128,0,29,0" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
+                <TextBox x:Name="yearOfProduction" Grid.Column="2" Background="Black" Width="100"  Grid.Row="1" Margin="128,0,29,0" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
             </Grid>
         </StackPanel>
 
@@ -71,16 +71,16 @@
                 </Grid.RowDefinitions>
 
                 <TextBlock Grid.Column="0" FontWeight="ExtraLight" Grid.Row="0" Text="Owner" VerticalAlignment="Center"/>
-                <TextBox Grid.Column="0" Background="Black" Width="100"  Grid.Row="1" Margin="0,0,29,0" VerticalAlignment="Bottom"/>
+                <TextBox x:Name="owner" Grid.Column="0" Background="Black" Width="100"  Grid.Row="1" Margin="0,0,29,0" VerticalAlignment="Bottom"/>
 
                 <TextBlock Grid.Column="1" FontWeight="ExtraLight" Grid.Row="0" Text="Location" VerticalAlignment="Center"/>
-                <TextBox Grid.Column="1" Background="Black" Width="100"  Grid.Row="1" Margin="0,0,28,0" VerticalAlignment="Center"/>
+                <TextBox x:Name="location" Grid.Column="1" Background="Black" Width="100"  Grid.Row="1" Margin="0,0,28,0" VerticalAlignment="Center"/>
 
                 <TextBlock Grid.Column="2" FontWeight="ExtraLight" Grid.Row="0" Text="Accident" VerticalAlignment="Center"/>
-                <TextBox Grid.Column="2" Background="Black" Width="100"  Grid.Row="1" Margin="0,0,28,0" VerticalAlignment="Center"/>
+                <TextBox x:Name="accident" Grid.Column="2" Background="Black" Width="100"  Grid.Row="1" Margin="0,0,28,0" VerticalAlignment="Center"/>
 
                 <TextBlock Grid.Column="3" FontWeight="ExtraLight" Grid.Row="0" Text="Price" VerticalAlignment="Center"/>
-                <TextBox Grid.Column="2" Background="Black" Width="100"  Grid.Row="1" Margin="128,0,29,0" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
+                <TextBox x:Name="price" Grid.Column="2" Background="Black" Width="100"  Grid.Row="1" Margin="128,0,29,0" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
             </Grid>
         </StackPanel>
 
@@ -103,13 +103,13 @@
                 </Grid.RowDefinitions>
 
                 <TextBlock Grid.Column="0" FontWeight="ExtraLight" Grid.Row="0" Text="Engine" VerticalAlignment="Center"/>
-                <TextBox Grid.Column="0" Background="Black" Width="100"  Grid.Row="1" Margin="0,0,29,0" VerticalAlignment="Center" TextChanged="TextBox_TextChanged"/>
+                <TextBox x:Name="engine" Grid.Column="0" Background="Black" Width="100"  Grid.Row="1" Margin="0,0,29,0" VerticalAlignment="Center"/>
 
                 <TextBlock Grid.Column="1" FontWeight="ExtraLight" Grid.Row="0" Text="Gearbox" VerticalAlignment="Center"/>
-                <TextBox Grid.Column="1" Background="Black" Width="100"  Grid.Row="1" Margin="0,0,28,0" VerticalAlignment="Center"/>
+                <TextBox x:Name="gearbox" Grid.Column="1" Background="Black" Width="100"  Grid.Row="1" Margin="0,0,28,0" VerticalAlignment="Center"/>
 
                 <TextBlock Grid.Column="2" FontWeight="ExtraLight" Grid.Row="0" Text="Horsepower" VerticalAlignment="Center"/>
-                <TextBox Grid.Column="2" Background="Black" Width="100"  Grid.Row="1" Margin="0,0,28,0" VerticalAlignment="Center"/>
+                <TextBox x:Name="horsepower" Grid.Column="2" Background="Black" Width="100"  Grid.Row="1" Margin="0,0,28,0" VerticalAlignment="Center"/>
             </Grid>
         </StackPanel>
 
@@ -132,13 +132,13 @@
                 </Grid.RowDefinitions>
 
                 <TextBlock Grid.Column="0" FontWeight="ExtraLight" Grid.Row="0" Text="Exterior color" VerticalAlignment="Center"/>
-                <TextBox Grid.Column="0" Background="Black" Width="100"  Grid.Row="1" Margin="0,0,29,0" VerticalAlignment="Center"/>
+                <TextBox x:Name="color_exterior" Grid.Column="0" Background="Black" Width="100"  Grid.Row="1" Margin="0,0,29,0" VerticalAlignment="Center"/>
 
                 <TextBlock Grid.Column="1" FontWeight="ExtraLight" Grid.Row="0" Text="Interior color" VerticalAlignment="Center"/>
-                <TextBox Grid.Column="1" Background="Black" Width="100"  Grid.Row="1" Margin="0,0,28,0" VerticalAlignment="Center"/>
+                <TextBox x:Name="color_interior" Grid.Column="1" Background="Black" Width="100"  Grid.Row="1" Margin="0,0,28,0" VerticalAlignment="Center"/>
 
-                <Button Grid.Row="1" Width="100"  FontWeight="SemiBold" Grid.Column="2" Content="REVIEW CARS" Background="White" Margin="0,0,28,0"/>
-                <Button Grid.Row="1" Width="100"  FontWeight="SemiBold" Grid.Column="2" Content="UPLOAD CAR" Background="White" Grid.ColumnSpan="2" Margin="128,0,29,0" Click="Button_Click"/>
+                <Button Grid.Row="1" Width="100" FontSize="10"  FontWeight="SemiBold" Grid.Column="2" Content="REVIEW CARS" Background="White" Margin="0,0,28,0" Height="18" VerticalAlignment="Top" Click="ReviewButton"/>
+                <Button Grid.Row="1" Width="100"  FontSize="10" FontWeight="SemiBold" Grid.Column="2" Content="UPLOAD CAR" Background="White" Grid.ColumnSpan="2" Margin="128,0,29,0" Click="UploadButton"/>
             </Grid>
         </StackPanel>
 

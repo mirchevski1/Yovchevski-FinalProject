@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace FinalProject
 {
-    /// <summary>
-    /// Interaction logic for LogIn.xaml
-    /// </summary>
     public partial class LogIn : Window
     {
         public LogIn()

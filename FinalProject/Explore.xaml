@@ -5,27 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FinalProject"
         mc:Ignorable="d"
-        Title="Explore" Height="450" Width="800" Background="Black" Foreground="White">
+        Title="Explore" Height="512" Width="720" Background="Black" Foreground="White">
     <Grid>
         <!-- Logo -->
         <Image Source="\Images\Cars\logo.png" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0" Height="30"/>
 
         <!-- Text -->
-        <TextBlock Text="Find your Porsche" FontSize="24" Foreground="White" Margin="70,60,0,340" HorizontalAlignment="Left"/>
+        <TextBlock Text="Find your Porsche" FontSize="24" Foreground="White" Margin="45,84,0,316" HorizontalAlignment="Left"/>
 
-        <ScrollViewer Height="300" Width="700" Margin="50,99,50,35">
+        <ScrollViewer Width="650" Margin="35,126,35,30" Foreground="Black">
             <ItemsControl x:Name="myItemsControl" ItemsSource="{Binding vehicles}">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                        <Grid Margin="10,20,10,10" Background="Gray">
+                        <Grid Margin="10,20,10,10"  Background="White">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto"/>
                                 <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
-                            <Rectangle Fill="Red" Height="200" Width="300"/>
+                            <Rectangle Fill="DarkGray" Height="200" Width="250"/>
                             <StackPanel Grid.Column="1" Margin="10">
-                                <TextBlock Text="{Binding Make}" FontWeight="SemiBold" FontSize="16"/>
-                                <Grid Margin="10">
+                                <TextBlock Text="{Binding Make}" FontWeight="SemiBold" FontSize="24"/>
+                                <Grid Margin="3,10,5,20">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition/>
                                         <ColumnDefinition/>
@@ -36,16 +36,16 @@
                                         <RowDefinition/>
                                         <RowDefinition/>
                                     </Grid.RowDefinitions>
-                                    <TextBlock HorizontalAlignment="Left" Text="{Binding ColorExterior, StringFormat={}Exterior: {0}}" Grid.Row="0" Grid.Column="0"/>
-                                    <TextBlock HorizontalAlignment="Right" Text="{Binding ColorInterior, StringFormat={}Interior: {0}}" Grid.Row="0" Grid.Column="1"/>
-                                    <TextBlock HorizontalAlignment="Left" Text="{Binding Range, StringFormat={}{0} Kilometres}" Grid.Row="1" Grid.Column="0"/>
-                                    <TextBlock HorizontalAlignment="Right" Text="{Binding Owner, StringFormat={}Previous Owners({0})}" Grid.Row="1" Grid.Column="1"/>
-                                    <TextBlock HorizontalAlignment="Left" Text="{Binding Gearbox}" Grid.Row="2" Grid.Column="0"/>
-                                    <TextBlock HorizontalAlignment="Right" Text="{Binding Engine}" Grid.Row="2" Grid.Column="1"/>
-                                    <TextBlock HorizontalAlignment="Left" Text="{Binding Location}" Grid.Row="3" Grid.Column="0"/>
-                                    <TextBlock HorizontalAlignment="Right" Text="{Binding Accidents, StringFormat={}Accidents: {0}}" Grid.Row="3" Grid.Column="1"/>
+                                    <TextBlock HorizontalAlignment="Left" Text="{Binding ColorExterior, StringFormat={}Exterior: {0}}" Grid.Row="0" Grid.Column="0" FontWeight="Light" FontSize="14"/>
+                                    <TextBlock HorizontalAlignment="Right" Text="{Binding ColorInterior, StringFormat={}Interior: {0}}" Grid.Row="0" Grid.Column="1" FontWeight="Light" FontSize="14"/>
+                                    <TextBlock HorizontalAlignment="Left" Text="{Binding Range, StringFormat={}{0} Kilometres}" Grid.Row="1" Grid.Column="0" FontWeight="Light" FontSize="14"/>
+                                    <TextBlock HorizontalAlignment="Right" Text="{Binding Owner, StringFormat={}Previous Owners: {0}}" Grid.Row="1" Grid.Column="1" FontWeight="Light" FontSize="14"/>
+                                    <TextBlock HorizontalAlignment="Left" Text="{Binding Gearbox}" Grid.Row="2" Grid.Column="0" FontWeight="Light" FontSize="14"/>
+                                    <TextBlock HorizontalAlignment="Right" Text="{Binding Engine}" Grid.Row="2" Grid.Column="1" FontWeight="Light" FontSize="14"/>
+                                    <TextBlock HorizontalAlignment="Left" Text="{Binding Location}" Grid.Row="3" Grid.Column="0" FontWeight="Light" FontSize="14"/>
+                                    <TextBlock HorizontalAlignment="Right" Text="{Binding Accident, StringFormat={}Accidents: {0}}" Grid.Row="3" Grid.Column="1" FontWeight="Light" FontSize="14"/>
                                 </Grid>
-                                <TextBlock Text="{Binding Price}" FontWeight="Bold" FontSize="20" Margin="0 10 0 0"/>
+                                <TextBlock Text="{Binding Price, StringFormat={}{0} BGN}" FontWeight="Regular" FontSize="20" Margin="0 10 0 0"/>
                             </StackPanel>
                         </Grid>
                     </DataTemplate>
@@ -53,6 +53,6 @@
             </ItemsControl>
 
         </ScrollViewer>
-        
+
     </Grid>
 </Window>

@@ -29,18 +29,18 @@
         <!-- Text fields for sign up form -->
         <StackPanel Grid.Row="3" Margin="40,25">
             <TextBlock Text="First Name" FontSize="10" Foreground="White" Margin="0,10,0,5"/>
-            <TextBox Width="187" HorizontalAlignment="Left" Margin="0,0,0,10"/>
+            <TextBox x:Name="first_name" Foreground="White" Background="Black" Width="187" HorizontalAlignment="Left" Margin="0,0,0,10"/>
             <TextBlock Text="Last Name" FontSize="10" Foreground="White" Margin="0,0,0,5"/>
-            <TextBox Width="187" HorizontalAlignment="Left" Margin="0,0,0,10"/>
+            <TextBox x:Name="last_name" Foreground="White" Background="Black" Width="187" HorizontalAlignment="Left" Margin="0,0,0,10"/>
             <TextBlock Text="Email" FontSize="10" Foreground="White" Margin="0,0,0,5"/>
-            <TextBox Width="187" HorizontalAlignment="Left" Margin="0,0,0,10"/>
-            <TextBlock Text="Password" FontSize="10" Foreground="White" Margin="0,0,0,5"/>
-            <PasswordBox Width="187" HorizontalAlignment="Left" Margin="0,0,0,10"/>
+            <TextBox x:Name="email" Foreground="White" Background="Black" Width="187" HorizontalAlignment="Left" Margin="0,0,0,10"/>
+            <TextBlock x:Name="pass" Text="Password" FontSize="10" Foreground="White" Margin="0,0,0,5"/>
+            <PasswordBox x:Name="password" Foreground="White" Background="Black" Width="187" HorizontalAlignment="Left" Margin="0,0,0,10"/>
             <TextBlock Text="Repeat Password" FontSize="10" Foreground="White" Margin="0,0,0,5"/>
-            <PasswordBox Width="187" HorizontalAlignment="Left" Margin="0,0,0,10"/>
+            <PasswordBox x:Name="repeatBox" Foreground="White" Background="Black" Width="187" HorizontalAlignment="Left" Margin="0,0,0,10"/>
         </StackPanel>
 
         <!-- Sign up button -->
-        <Button Grid.Row="3" Width="186" Height="28" FontSize="10" FontWeight="SemiBold" Content="CREATE PORSCHE ID ACCOUNT" Background="#A43131" HorizontalAlignment="Left" Foreground="White" Margin="40,280,0,46"/>
+        <Button Grid.Row="3" Width="186" Height="28" FontSize="10" FontWeight="SemiBold" Content="CREATE PORSCHE ID ACCOUNT" Background="#A43131" HorizontalAlignment="Left" Foreground="White" Margin="40,280,0,46" Click="SignupButton_Click"/>
     </Grid>
 </Window>

@@ -24,13 +24,19 @@ namespace FinalProject
             InitializeComponent();
         }
 
-        private void AdminButtonClick(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
         private void UserButtonClick(object sender, RoutedEventArgs e)
         {
+            LogIn r1 = new LogIn();
+            this.Close();
+            r1.Show();
+
+        }
+
+        private void AdminButtonClick(object sender, RoutedEventArgs e)
+        {
+            SignUp r2 = new SignUp();
+            this.Close();
+            r2.Show();
 
         }
     }

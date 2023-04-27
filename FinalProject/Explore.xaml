@@ -1,0 +1,74 @@
+﻿<Window x:Class="FinalProject.Explore"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FinalProject"
+        mc:Ignorable="d"
+        Title="Explore" Height="450" Width="800" Background="Black" Foreground="White">
+    <Grid>
+        <!-- Logo -->
+        <Image Source="\Images\Cars\logo.png" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0" Height="30"/>
+
+        <!-- Text -->
+        <TextBlock Text="Find your Porsche" FontSize="24" Foreground="White" Margin="0,100,0,0" HorizontalAlignment="Center"/>
+
+        
+
+
+        <!-- Scrollable card -->
+        <ScrollViewer Margin="70,200,70,20">
+            <ItemsControl ItemsSource="{Binding vehicles}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <!-- Card section for each entry in the data table -->
+                        <Border BorderBrush="Gray" BorderThickness="1" Margin="10" Padding="10">
+                            <Grid>
+                                <!-- Column 1: Image representing the entry -->
+                                <Image Source="{Binding ImageSource}" Width="100" Height="100"/>
+
+                                <!-- Column 2: Title consisting of model + make column of the data table -->
+                                <StackPanel Margin="10" Grid.Column="1">
+                                    <TextBlock Text="{Binding Model}" FontSize="20" FontWeight="Bold"/>
+                                    <TextBlock Text="{Binding Make}" FontSize="20" FontWeight="Bold"/>
+                                </StackPanel>
+
+                                <!-- Row 1 -->
+                                <StackPanel Margin="10" Grid.Row="1" Grid.ColumnSpan="2" Orientation="Horizontal">
+                                    <TextBlock Text="Year:" FontWeight="Bold"/>
+                                    <TextBlock Text="{Binding yearOfProduction}" Margin="10,0,0,0"/>
+                                    <TextBlock Text="Mileage:" Margin="20,0,0,0" FontWeight="Bold"/>
+                                    <TextBlock Text="{Binding Mileage}" Margin="10,0,0,0"/>
+                                </StackPanel>
+
+                                <!-- Row 2 -->
+                                <StackPanel Margin="10" Grid.Row="2" Grid.ColumnSpan="2" Orientation="Horizontal">
+                                    <TextBlock Text="Color:" FontWeight="Bold"/>
+                                    <TextBlock Text="{Binding Color}" Margin="10,0,0,0"/>
+                                    <TextBlock Text="Transmission:" Margin="20,0,0,0" FontWeight="Bold"/>
+                                    <TextBlock Text="{Binding Transmission}" Margin="10,0,0,0"/>
+                                </StackPanel>
+
+                                <!-- Row 3 -->
+                                <StackPanel Margin="10" Grid.Row="3" Grid.ColumnSpan="2" Orientation="Horizontal">
+                                    <TextBlock Text="Engine:" FontWeight="Bold"/>
+                                    <TextBlock Text="{Binding Engine}" Margin="10,0,0,0"/>
+                                    <TextBlock Text="Fuel:" Margin="20,0,0,0" FontWeight="Bold"/>
+                                    <TextBlock Text="{Binding Fuel}" Margin="10,0,0,0"/>
+                                </StackPanel>
+
+                                <!-- Row 4 -->
+                                <StackPanel Margin="10" Grid.Row="4" Grid.ColumnSpan="2" Orientation="Horizontal">
+                                    <TextBlock Text="Condition:" FontWeight="Bold"/>
+                                    <TextBlock Text="{Binding Condition}" Margin="10,0,0,0"/>
+                                    <TextBlock Text="Price:" Margin="20,0,0,0" FontWeight="Bold"/>
+                                    <TextBlock Text="{Binding Price}" Margin="10,0,0,0"/>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+    </Grid>
+</Window>

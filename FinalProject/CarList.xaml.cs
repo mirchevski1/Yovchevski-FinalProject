@@ -14,14 +14,18 @@ using System.Windows.Shapes;
 
 namespace FinalProject
 {
-    /// <summary>
-    /// Interaction logic for CarList.xaml
-    /// </summary>
     public partial class CarList : Window
     {
         public CarList()
         {
             InitializeComponent();
+        }
+
+        private void Button_911(object sender, RoutedEventArgs e)
+        {
+            Explore obj = new Explore();
+            this.Close();
+            obj.Show();
         }
     }
 }

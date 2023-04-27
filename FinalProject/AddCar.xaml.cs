@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace FinalProject
 {
-    /// <summary>
-    /// Interaction logic for AddCar.xaml
-    /// </summary>
     public partial class AddCar : Window
     {
         public AddCar()
@@ -43,9 +40,9 @@ namespace FinalProject
                 cmd.Parameters.AddWithValue("@gearbox", gearbox.Text);
                 cmd.Parameters.AddWithValue("@engine", engine.Text);
                 cmd.Parameters.AddWithValue("@location", location.Text);
-                cmd.Parameters.AddWithValue("@accident", accident.Text);
                 cmd.Parameters.AddWithValue("@yearOfProduction", yearOfProduction.Text);
                 cmd.Parameters.AddWithValue("@price", price.Text);
+                cmd.Parameters.AddWithValue("@accident", accident.Text);
                 cmd.ExecuteNonQuery();
                 con.Close();
 
@@ -63,10 +60,6 @@ namespace FinalProject
                 price.Text = "";
 
                 MessageBox.Show("Vehicle added succesfully.");
-
-                CarList obj = new CarList();
-                obj.Show();
-                this.Close();
             }
             catch (Exception ex)
             {

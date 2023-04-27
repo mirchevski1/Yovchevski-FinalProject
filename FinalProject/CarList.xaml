@@ -19,7 +19,7 @@
 
         <!-- Car grid -->
         <UniformGrid Grid.Row="2" Rows="2" Columns="3" HorizontalAlignment="Center">
-            <Button Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+            <Button Click="Button_911" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
                 <StackPanel>
                     <Image Source="Images\Cars\992-Resize.png" Width="200" Height="120" />
                     <TextBlock Text="Porsche 911" Margin="0,5,0,0" TextAlignment="Center" Foreground="White" />

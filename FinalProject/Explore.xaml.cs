@@ -27,14 +27,23 @@ public partial class Explore : Window
             myItemsControl.ItemsSource = vehicles;
         }
 
+        private void LogoButton(object sender, RoutedEventArgs e)
+        {
+            CarList obj = new CarList();
+            this.Close();
+            obj.Show();
+        }
+
         private List<Vehicle> GetVehiclesFromDatabase()
         {
             List<Vehicle> vehicles = new List<Vehicle>();
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                SqlCommand command = new SqlCommand("SELECT * FROM vehicles", connection);
+                string thisModel = CarList.myModel;
+                SqlCommand command = new SqlCommand("SELECT * FROM vehicles WHERE model = @thisModel", connection);
                 connection.Open();
+                command.Parameters.AddWithValue("@thisModel", thisModel);
                 SqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {

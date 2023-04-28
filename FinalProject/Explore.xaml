@@ -7,11 +7,18 @@
         mc:Ignorable="d"
         Title="Explore" Height="512" Width="720" Background="Black" Foreground="White">
     <Grid>
-        <!-- Logo -->
-        <Image Source="\Images\Cars\logo.png" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0" Height="30"/>
+     
+
+        <Button Click="LogoButton">
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Source="\Images\Cars\logo.png" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0" Height="30"/>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
 
         <!-- Text -->
-        <TextBlock Text="Find your Porsche" FontSize="24" Foreground="White" Margin="45,84,0,316" HorizontalAlignment="Left"/>
+        <TextBlock Text="Find your Porsche" FontSize="24" Foreground="White" Margin="43,84,0,316" HorizontalAlignment="Left"/>
 
         <ScrollViewer Width="650" Margin="35,126,35,30" Foreground="Black">
             <ItemsControl x:Name="myItemsControl" ItemsSource="{Binding vehicles}">
@@ -22,7 +29,8 @@
                                 <ColumnDefinition Width="Auto"/>
                                 <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
-                            <Rectangle Fill="DarkGray" Height="200" Width="250"/>
+                            <!--<Rectangle Fill="DarkGray" Height="200" Width="250"/>-->
+                            <Image Height="200" Width="250" Source="Images/Cars/macan-resize.png"/>
                             <StackPanel Grid.Column="1" Margin="10">
                                 <TextBlock Text="{Binding Make}" FontWeight="SemiBold" FontSize="24"/>
                                 <Grid Margin="3,10,5,20">
@@ -51,8 +59,6 @@
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
-
         </ScrollViewer>
-
     </Grid>
 </Window>

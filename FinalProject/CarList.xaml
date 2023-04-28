@@ -26,35 +26,35 @@
                 </StackPanel>
             </Button>
 
-            <Button Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+            <Button Click="Button_Panamera" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
                 <StackPanel>
                     <Image Source="Images\Cars\panamera-resize.png" Width="200" Height="120" />
                     <TextBlock Text="Porsche Panamera" TextAlignment="Center" Margin="0,5,0,0" Foreground="White" />
                 </StackPanel>
             </Button>
 
-            <Button Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+            <Button Click="Button_Cayenne" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
                 <StackPanel>
                     <Image Source="Images\Cars\cayenne-resize.png" Width="200" Height="120" />
                     <TextBlock Text="Porsche Cayenne" TextAlignment="Center" Margin="0,5,0,0" Foreground="White" />
                 </StackPanel>
             </Button>
 
-            <Button Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+            <Button Click="Button_718" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
                 <StackPanel>
                     <Image Source="Images\Cars\718-resize.png" Width="200" Height="120" />
                     <TextBlock Text="Porsche 718" TextAlignment="Center" Margin="0,5,0,0" Foreground="White" />
                 </StackPanel>
             </Button>
 
-            <Button Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+            <Button Click="Button_Taycan" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
                 <StackPanel>
                     <Image Source="Images\Cars\taycan-resize.png" Width="200" Height="120" />
                     <TextBlock Text="Porsche Taycan" TextAlignment="Center" Margin="0,5,0,0" Foreground="White" />
                 </StackPanel>
             </Button>
 
-            <Button Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+            <Button Click="Button_Macan" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
                 <StackPanel>
                     <Image Source="Images\Cars\macan-resize.png" Width="200" Height="120" />
                     <TextBlock Text="Porsche Macan" TextAlignment="Center" Margin="0,5,0,0" Foreground="White" />

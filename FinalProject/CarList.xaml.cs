@@ -21,8 +21,51 @@ namespace FinalProject
             InitializeComponent();
         }
 
+        public static string myModel;
+
         private void Button_911(object sender, RoutedEventArgs e)
         {
+            myModel = "911";
+            Explore obj = new Explore();
+            this.Close();
+            obj.Show();
+        }
+
+        private void Button_718(object sender, RoutedEventArgs e)
+        {
+            myModel = "718";
+            Explore obj = new Explore();
+            this.Close();
+            obj.Show();
+        }
+
+        private void Button_Taycan(object sender, RoutedEventArgs e)
+        {
+            myModel = "Taycan";
+            Explore obj = new Explore();
+            this.Close();
+            obj.Show();
+        }
+
+        private void Button_Panamera(object sender, RoutedEventArgs e)
+        {
+            myModel = "Panamera";
+            Explore obj = new Explore();
+            this.Close();
+            obj.Show();
+        }
+
+        private void Button_Cayenne(object sender, RoutedEventArgs e)
+        {
+            myModel = "Cayenne";
+            Explore obj = new Explore();
+            this.Close();
+            obj.Show();
+        }
+
+        private void Button_Macan(object sender, RoutedEventArgs e)
+        {
+            myModel = "Macan";
             Explore obj = new Explore();
             this.Close();
             obj.Show();

@@ -1,11 +1,11 @@
-﻿<Window x:Class="FinalProject.LogIn"
+﻿<Window x:Class="FinalProject.AdminLog"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FinalProject"
         mc:Ignorable="d"
-        Title="LogIn" Height="512" Width="720"  Background="Black">
+        Title="AdminLog" Height="512" Width="720" Background="Black">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
@@ -72,12 +72,6 @@
                 Background="#A43131"
                 Foreground="White"
                 Click="LoginButton_Click"/>
-
-            <Button Grid.Row="5" Margin="0,20,0,10" FontWeight="Light" Click="SignUpButton" BorderThickness="0">
-                <TextBlock>
-                Don't have an account? Sign up?
-                </TextBlock>
-            </Button>
 
             <!--<TextBlock 
                 Grid.Row="5" 

@@ -31,7 +31,7 @@ namespace FinalProject
 
         private void AdminButtonClick(object sender, RoutedEventArgs e)
         {
-            AddCar r2 = new AddCar();
+            AdminLog r2 = new AdminLog();
             this.Close();
             r2.Show();
 

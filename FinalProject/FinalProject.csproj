@@ -52,4 +52,9 @@
     </Resource>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Images\Specific\" />
+    <Folder Include="Sub-Windows\" />
+  </ItemGroup>
+
 </Project>

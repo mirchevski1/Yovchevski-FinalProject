@@ -15,9 +15,12 @@ using System.Windows.Shapes;
 
 namespace FinalProject
 {
-    public partial class LogIn : Window
+    /// <summary>
+    /// Interaction logic for AdminLog.xaml
+    /// </summary>
+    public partial class AdminLog : Window
     {
-        public LogIn()
+        public AdminLog()
         {
             InitializeComponent();
         }
@@ -28,7 +31,7 @@ namespace FinalProject
             {
                 SqlConnection con = new SqlConnection(@"Server=DESKTOP-U43FOB2\MSSQLSERVER01;Database=InformaticsFinalProject;Integrated Security=True");
                 con.Open();
-                string add_data = "SELECT * FROM [dbo].[userAccount] WHERE email=@email AND password=@password";
+                string add_data = "SELECT * FROM [dbo].[adminAccount] WHERE email=@email AND password=@password";
                 SqlCommand cmd = new SqlCommand(add_data, con);
 
                 cmd.Parameters.AddWithValue("@email", email.Text);
@@ -36,13 +39,10 @@ namespace FinalProject
                 cmd.ExecuteNonQuery();
                 int count = Convert.ToInt32(cmd.ExecuteScalar());
 
-                //string countStr = count.ToString();
 
-                //MessageBox.Show(countStr);
-
-                if(count > 0)
+                if (count > 0)
                 {
-                    CarList obj = new CarList();
+                    AddCar obj = new AddCar();
                     this.Close();
                     obj.Show();
                 }
@@ -56,13 +56,6 @@ namespace FinalProject
             {
                 MessageBox.Show(ex.Message);
             }
-        }
-
-        private void SignUpButton(object sender, RoutedEventArgs e)
-        {
-            SignUp obj = new SignUp();
-            this.Close();
-            obj.Show();
         }
     }
 }
